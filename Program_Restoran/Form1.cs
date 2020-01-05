@@ -138,8 +138,44 @@ namespace Program_Restoran
                 lblharga.Text = "12000";
             }
 
-            //tes
-            
+            //For food 
+
+            if (txtid.Text == "F001" || txtid.Text == "f001")
+            {
+                txtmenu.Text = "Pizza";
+                lblharga.Text = "10000";
+
+            }
+
+            else if (txtid.Text == "F002" || txtid.Text == "f002")
+            {
+                txtmenu.Text = "Burger";
+                lblharga.Text = "25000";
+            }
+            else if (txtid.Text == "F003" || txtid.Text == "f003")
+            {
+                txtmenu.Text = "Fried Chicken";
+                lblharga.Text = "20000";
+            }
+
+            else if (txtid.Text == "F004" || txtid.Text == "f004")
+            {
+                txtmenu.Text = "French Fries";
+                lblharga.Text = "10000";
+            }
+
+            else if (txtid.Text == "F005" || txtid.Text == "f005")
+            {
+                txtmenu.Text = "Hot Dog";
+                lblharga.Text = "15000";
+            }
+            else if (txtid.Text == "F006" || txtid.Text == "f006")
+            {
+                txtmenu.Text = " Spaghetti";
+                lblharga.Text = "300000";
+            }
+        
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
