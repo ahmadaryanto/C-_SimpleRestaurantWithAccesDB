@@ -138,6 +138,7 @@ namespace Program_Restoran
                 lblharga.Text = "12000";
             }
 
+            //tes
             
         }
 
