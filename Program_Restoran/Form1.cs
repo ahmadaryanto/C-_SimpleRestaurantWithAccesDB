@@ -74,7 +74,7 @@ namespace Program_Restoran
 
         private void btproses_Click(object sender, EventArgs e)
         {
-            if ( this.txtid.Text =="" ||this.txtmenu.Text == "" ||  this.txtjumlah.Text == null)
+            if ( this.txtid.Text =="" ||this.txtmenu.Text == "" ||  this.txtjumlah.Text == "")
             {
                 MessageBox.Show("Data tidak boleh kosong", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -89,11 +89,17 @@ namespace Program_Restoran
             txtjumlah.Clear();
             txtmenu.Clear();
             lblharga.Text = "0";
+            int sum = 0;
+            for (int i = 0; i < DG.Rows.Count; ++i)
+            {
+                sum += Convert.ToInt32(DG.Rows[i].Cells[4].Value);
+            }
+            txtgrand.Text = sum.ToString();
         }
 
         private void txtid_TextChanged(object sender, EventArgs e)
         {
-            if (txtid.Text == "D001" || txtid.Text == "D001")
+            if (txtid.Text == "D001" || txtid.Text == "d001")
             {
                 txtmenu.Text = "Orange Juice";
                 lblharga.Text = "7000";
@@ -207,37 +213,36 @@ namespace Program_Restoran
             }
 
             //for desserts
-            if (txtid.Text == "S001" || txtid.Text == "s001")
+
+            if (txtid.Text == "DS001" || txtid.Text == "ds001")
             {
-                txtmenu.Text = "Fried Potato";
-                lblharga.Text = "7000";
+                txtmenu.Text = "Pudding";
+                lblharga.Text = "10000";
 
             }
 
-            else if (txtid.Text == "S002" || txtid.Text == "s002")
+            else if (txtid.Text == "Ds002" || txtid.Text == "ds002")
             {
-                txtmenu.Text = "Baked Potato";
+                txtmenu.Text = "Pancake";
                 lblharga.Text = "10000";
             }
-            else if (txtid.Text == "S003" || txtid.Text == "s003")
+            else if (txtid.Text == "Ds003" || txtid.Text == "ds003")
             {
-                txtmenu.Text = "Toast";
-                lblharga.Text = "15000";
+                txtmenu.Text = "Ice Cream";
+                lblharga.Text = "10000";
             }
 
-            else if (txtid.Text == "S004" || txtid.Text == "s004")
+            else if (txtid.Text == "Ds004" || txtid.Text == "ds004")
             {
-                txtmenu.Text = "Chicken Wings";
+                txtmenu.Text = "Chocolate";
                 lblharga.Text = "20000";
             }
 
-            else if (txtid.Text == "Chicken Sticks" || txtid.Text == "s005")
+            else if (txtid.Text == "Ds005" || txtid.Text == "ds005")
             {
-                txtmenu.Text = "Hot Dog";
-                lblharga.Text = "12000";
+                txtmenu.Text = "Salad";
+                lblharga.Text = "10000";
             }
-
-
 
 
         }
@@ -255,6 +260,30 @@ namespace Program_Restoran
             table.Columns.Add("Harga", typeof(Int32));// data type int
             table.Columns.Add("Total", typeof(Int32));// data type int
             DG.DataSource = table;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Frmfood food = new Frmfood();
+            food.ShowDialog();
+        }
+
+        private void Btitem_Click(object sender, EventArgs e)
+        {
+            Frmfood drink = new Frmfood();
+            drink.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmDesserts desserts = new FrmDesserts();
+            desserts.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmSnack snack = new FrmSnack();
+            snack.ShowDialog();
         }
     }
 }

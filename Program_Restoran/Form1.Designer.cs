@@ -54,6 +54,8 @@
             this.lbluser = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtgrand = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtgrand = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.GroupBox4.SuspendLayout();
@@ -335,6 +335,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PESAN";
             // 
+            // txtgrand
+            // 
+            this.txtgrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtgrand.Location = new System.Drawing.Point(373, 472);
+            this.txtgrand.Name = "txtgrand";
+            this.txtgrand.Size = new System.Drawing.Size(178, 29);
+            this.txtgrand.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(272, 478);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 20);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Grand Total";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -445,6 +463,7 @@
             this.button3.Text = "Food";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -460,6 +479,7 @@
             this.button2.Text = "Snack";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -475,6 +495,7 @@
             this.button1.Text = "Dessert";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Btitem
             // 
@@ -490,6 +511,7 @@
             this.Btitem.Text = "Drink";
             this.Btitem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btitem.UseVisualStyleBackColor = false;
+            this.Btitem.Click += new System.EventHandler(this.Btitem_Click);
             // 
             // toolStrip1
             // 
@@ -512,24 +534,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // txtgrand
-            // 
-            this.txtgrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgrand.Location = new System.Drawing.Point(373, 472);
-            this.txtgrand.Name = "txtgrand";
-            this.txtgrand.Size = new System.Drawing.Size(178, 29);
-            this.txtgrand.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(272, 478);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 20);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Grand Total";
             // 
             // Form1
             // 
