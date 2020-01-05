@@ -74,7 +74,7 @@ namespace Program_Restoran
 
         private void btproses_Click(object sender, EventArgs e)
         {
-            if (this.txtmenu.Text == "" || this.txtjumlah.Text == null)
+            if ( this.txtid.Text =="" ||this.txtmenu.Text == "" ||  this.txtjumlah.Text == null)
             {
                 MessageBox.Show("Data tidak boleh kosong", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -174,7 +174,38 @@ namespace Program_Restoran
                 txtmenu.Text = " Spaghetti";
                 lblharga.Text = "300000";
             }
-        
+
+            //for snacks
+            if (txtid.Text == "S001" || txtid.Text == "s001")
+            {
+                txtmenu.Text = "Fried Potato";
+                lblharga.Text = "7000";
+
+            }
+
+            else if (txtid.Text == "S002" || txtid.Text == "s002")
+            {
+                txtmenu.Text = "Baked Potato";
+                lblharga.Text = "10000";
+            }
+            else if (txtid.Text == "S003" || txtid.Text == "s003")
+            {
+                txtmenu.Text = "Toast";
+                lblharga.Text = "15000";
+            }
+
+            else if (txtid.Text == "S004" || txtid.Text == "s004")
+            {
+                txtmenu.Text = "Chicken Wings";
+                lblharga.Text = "20000";
+            }
+
+            else if (txtid.Text == "Chicken Sticks" || txtid.Text == "s005")
+            {
+                txtmenu.Text = "Hot Dog";
+                lblharga.Text = "12000";
+            }
+          
 
         }
 
