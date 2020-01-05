@@ -285,5 +285,25 @@ namespace Program_Restoran
             FrmSnack snack = new FrmSnack();
             snack.ShowDialog();
         }
+
+        private void btbatal_Click(object sender, EventArgs e)
+        {
+          
+
+
+            DG.Rows.Clear();
+            txtid.Clear();
+            txtjumlah.Clear();
+            txtgrand.Clear();
+            txtmenu.Clear();
+            lblharga.Text = "0";
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
+        {
+            frmbayar bayar = new frmbayar(txtgrand.Text);
+            bayar.ShowDialog();
+           
+        }
     }
 }

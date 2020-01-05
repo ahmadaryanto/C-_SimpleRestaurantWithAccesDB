@@ -220,6 +220,7 @@
             this.Button12.TabIndex = 4;
             this.Button12.Text = "Proses";
             this.Button12.UseVisualStyleBackColor = true;
+            this.Button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // btbatal
             // 
@@ -230,6 +231,7 @@
             this.btbatal.TabIndex = 3;
             this.btbatal.Text = "Batal";
             this.btbatal.UseVisualStyleBackColor = true;
+            this.btbatal.Click += new System.EventHandler(this.btbatal_Click);
             // 
             // btproses
             // 
@@ -337,6 +339,7 @@
             // 
             // txtgrand
             // 
+            this.txtgrand.Enabled = false;
             this.txtgrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtgrand.Location = new System.Drawing.Point(373, 472);
             this.txtgrand.Name = "txtgrand";
