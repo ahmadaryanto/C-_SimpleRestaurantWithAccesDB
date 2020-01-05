@@ -44,6 +44,7 @@
             this.Label3 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.Panel1.SuspendLayout();
             this.GroupBox1.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // txtid
             // 
+            this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(157, 29);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(197, 29);
@@ -170,6 +172,7 @@
             // 
             // txtharga
             // 
+            this.txtharga.Enabled = false;
             this.txtharga.Location = new System.Drawing.Point(157, 99);
             this.txtharga.Name = "txtharga";
             this.txtharga.Size = new System.Drawing.Size(241, 29);
@@ -177,6 +180,7 @@
             // 
             // txtdes
             // 
+            this.txtdes.Enabled = false;
             this.txtdes.Location = new System.Drawing.Point(157, 64);
             this.txtdes.Name = "txtdes";
             this.txtdes.Size = new System.Drawing.Size(241, 29);
@@ -209,11 +213,22 @@
             this.Label1.TabIndex = 0;
             this.Label1.Text = "ID";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(278, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 50);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Unlock";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmDesserts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 516);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DG);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.GroupBox1);
@@ -244,5 +259,6 @@
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.Button button1;
     }
 }

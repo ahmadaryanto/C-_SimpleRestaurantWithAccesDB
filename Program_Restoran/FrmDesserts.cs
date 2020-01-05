@@ -161,6 +161,13 @@ namespace Program_Restoran
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtdes.Enabled = true;
+            txtharga.Enabled = true;
+            txtid.Enabled = true;
+        }
     }
     }
 

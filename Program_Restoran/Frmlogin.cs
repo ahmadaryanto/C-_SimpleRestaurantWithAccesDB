@@ -42,6 +42,7 @@ namespace Program_Restoran
             {
                 Form1 F1 = new Form1();
                 F1.Show();
+                this.Hide();
                 F1.LabelText = this.txtname.Text;
             }
             else
