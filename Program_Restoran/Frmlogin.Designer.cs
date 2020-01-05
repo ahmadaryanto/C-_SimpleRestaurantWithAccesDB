@@ -58,6 +58,7 @@
             this.BtCancel.TabIndex = 12;
             this.BtCancel.Text = "Cancel";
             this.BtCancel.UseVisualStyleBackColor = false;
+            this.BtCancel.Click += new System.EventHandler(this.BtCancel_Click);
             // 
             // BTlogin
             // 

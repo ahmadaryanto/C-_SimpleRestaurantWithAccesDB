@@ -17,27 +17,27 @@ namespace Program_Restoran
         string koneksi = "Provider = Microsoft.jet.oledb.4.0;Data source=" + Application.StartupPath + "/Restoran.mdb";
         private void tampil()
         {
-            string sql = "select * from TB_Drink";
+            string sql = "select * from TB_Snack";
             OleDbConnection con = new OleDbConnection(koneksi);
             con.Open();
             OleDbDataAdapter da = new OleDbDataAdapter(sql, con);
-            da.Fill(ds, "TB_Drink");
+            da.Fill(ds, "TB_Snack");
             con.Close();
-            DG.DataSource = ds.Tables["TB_Drink"].DefaultView;
+            DG.DataSource = ds.Tables["TB_Snack"].DefaultView;
         }
 
 
 
         private void search()
         {
-            string sql = "select * from TB_Drink where id='" + txtid.Text + "'";
+            string sql = "select * from TB_Snack where id='" + txtid.Text + "'";
             OleDbConnection con = new OleDbConnection(koneksi);
             con.Open();
             OleDbDataAdapter da = new OleDbDataAdapter(sql, con);
             ds.Clear();
-            da.Fill(ds, "TB_Drink");
+            da.Fill(ds, "TB_Snack");
             con.Close();
-            DG.DataSource = ds.Tables["TB_Drink"].DefaultView;
+            DG.DataSource = ds.Tables["TB_Snack"].DefaultView;
         }
         public FrmSnack()
         {
@@ -51,9 +51,18 @@ namespace Program_Restoran
 
         private void btsave_Click(object sender, EventArgs e)
         {
+            if (txtid.Text == "" || txtharga.Text == "" || txtdes.Text == "")
+            {
+                MessageBox.Show("Data tidak boleh kosong", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtdes.Clear();
+                txtharga.Clear();
+                txtid.Clear();
+                return;
+            }
+
             try
             {
-                string sql = string.Format("Update TB_Drink  set Nama_Item ='" + txtdes.Text + "',Harga='" + txtharga.Text + "' where id='" + txtid.Text + "'");
+                string sql = string.Format("Update TB_Snack  set Nama_Item ='" + txtdes.Text + "',Harga='" + txtharga.Text + "' where id='" + txtid.Text + "'");
                 OleDbConnection con = new OleDbConnection(koneksi);
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand(sql, con);
@@ -76,7 +85,7 @@ namespace Program_Restoran
                 DialogResult result = MessageBox.Show("Yakin Hapus?", "Peringatan", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = string.Format("delete * from TB_Drink where id='" + txtid.Text + "'");
+                    string sql = string.Format("delete * from TB_Snack where id='" + txtid.Text + "'");
                     OleDbConnection con = new OleDbConnection(koneksi);
                     con.Open();
                     OleDbCommand cmd = new OleDbCommand(sql, con);
@@ -105,7 +114,7 @@ namespace Program_Restoran
 
             try
             {
-                string sql = string.Format("Insert into TB_Drink (ID,Nama_Item,Harga) Values('{0}','{1}','{2}')", txtid.Text, txtdes.Text, txtharga.Text);
+                string sql = string.Format("Insert into TB_Snack (ID,Nama_Item,Harga) Values('{0}','{1}','{2}')", txtid.Text, txtdes.Text, txtharga.Text);
                 OleDbConnection con = new OleDbConnection(koneksi);
                 con.Open();
                 OleDbCommand cmd = new OleDbCommand(sql, con);

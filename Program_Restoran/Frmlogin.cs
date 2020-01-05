@@ -53,5 +53,11 @@ namespace Program_Restoran
 
 
         }
+
+        private void BtCancel_Click(object sender, EventArgs e)
+        {
+            txtname.Clear();
+            txtpassword.Clear();
+        }
     }
 }

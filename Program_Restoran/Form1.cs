@@ -45,7 +45,7 @@ namespace Program_Restoran
 
         private void drinksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frmfood drink = new Frmfood();
+            FrmDrink drink = new FrmDrink();
             drink.ShowDialog();
         }
 
@@ -270,7 +270,7 @@ namespace Program_Restoran
 
         private void Btitem_Click(object sender, EventArgs e)
         {
-            Frmfood drink = new Frmfood();
+            FrmDrink drink = new FrmDrink();
             drink.ShowDialog();
         }
 

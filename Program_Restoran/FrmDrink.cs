@@ -47,6 +47,15 @@ namespace Program_Restoran
 
         private void btsave_Click(object sender, EventArgs e)
         {
+            if (txtid.Text == "" || txtharga.Text == "" || txtdes.Text == "")
+            {
+                MessageBox.Show("Data tidak boleh kosong", "Perhatian", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtdes.Clear();
+                txtharga.Clear();
+                txtid.Clear();
+                return;
+            }
+
             try
             {
                 string sql = string.Format("Update TB_Drink  set Nama_Item ='" + txtdes.Text + "',Harga='" + txtharga.Text + "' where id='" + txtid.Text + "'");
